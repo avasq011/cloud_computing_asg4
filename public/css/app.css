@@ -1,0 +1,26 @@
+.neon{
+    position: static;
+    text-align: center;
+    margin: 0;
+    padding: 0 10px;
+    font-size: 3em;
+    color: #aafaee;
+    text-shadow: 0 0 20px #32f7d9;
+ 
+}
+
+p{
+    background-color: rgb(5, 131, 148);
+    color: rgb(226, 212, 212);
+    padding: 5px;
+    font-size: 180%;
+    top:50%;
+    text-align: center;
+}
+
+body{ 
+    background-image: url('/images/dragon.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: contain;        
+    }

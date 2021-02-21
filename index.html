@@ -1,0 +1,38 @@
+<!-- URL for web page http://52.90.242.78:8080-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cloud Computing</title>
+        <link href="/css/app.css" rel="stylesheet" type="text/css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+       
+        <h1 class="neon" data-text="NEON LIGHTS">Cloud Computing Assignment #2 </h1>
+
+        <div>
+            <p id=publicserverip>  </p>
+            <p id=privateserverip>  </p>
+        </div>  
+       
+</body>
+<footer>
+    <script>
+        $(document).ready(function(){
+            $.ajax({ url: "getpublicipaddress", context: document.body, success: function(data){
+                var ip = data;
+                $("#publicserverip").html("Public IP address: " + ip);
+            }});
+
+            $.ajax({ url: "getprivateipaddress", context: document.body, success: function(data){
+                var ip = data;
+                $("#privateserverip").html("Private IP address: " + ip);
+            }});
+        });
+
+    </script>
+
+    
+</footer>
+</html>
